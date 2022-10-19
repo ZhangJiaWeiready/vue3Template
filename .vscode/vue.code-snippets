@@ -1,0 +1,38 @@
+{
+  "初始化控制器": {
+    "prefix": "Init_Vue_Component",
+    "scope": "vue",
+    "description": "初始化vue组件",
+    "body": [
+      "<template>",
+      "\t<div>",
+      "\t</div>",
+      "</template>",
+      "",
+      "<script>",
+      "import { ref, reactive, toRefs, onMounted } from \"vue\";",
+      "import { useRouter, useRoute } from \"vue-router\";",
+      "",
+      "export default {",
+      "\tmounted() {",
+      "\t\tconsole.log(\"mounted\");",
+      "\t},",
+      "\tmethods: {",
+      "\t},",
+      "\tsetup() {",
+      "\t\tonMounted(() => {",
+      "\t\t\tconsole.log(\"onMounted\");",
+      "\t\t});",
+      "\t\treturn {",
+      "\t\t};",
+      "\t},",
+      "};",
+      "</script>",
+      "",
+      "<style lang='less' scoped>",
+      "",
+      "</style>",
+      "",
+    ]
+  }
+}

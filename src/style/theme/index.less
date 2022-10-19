@@ -1,0 +1,61 @@
+/*
+ * @功能描述: 覆盖部分antDesign样式
+ * @作者: liuzq 
+ * @创建时间: 2021-08-26 18:30:41 
+ * @最新修改人: liuzq 
+ * @最新修改时间: 2021-08-26 18:30:41 
+ */
+
+#app {
+  @import "./form.less";
+  //menu
+  .ant-menu-horizontal > .ant-menu-item::after,
+  .ant-menu-horizontal > .ant-menu-submenu::after {
+    width: 100%;
+    left: 0px;
+  }
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+    border-bottom: 3px solid @primary-color;
+  }
+  .ant-menu-dark.ant-menu-inline .ant-menu-item::after,
+  .ant-menu-dark.ant-menu-vertical .ant-menu-item::after,
+  .ant-menu-dark.ant-menu-vertical-left .ant-menu-item::after,
+  .ant-menu-dark.ant-menu-vertical-right .ant-menu-item::after {
+    border-left: 2px solid @primary-color;
+    position: absolute;
+    left: 0;
+  }
+
+  //tabel  - wrapper-content包裹情况下的table样式
+  .ant-spin-container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 156px);
+  }
+  .ant-table {
+    flex: 1 1 auto;
+  }
+  .ant-table-pagination.ant-pagination {
+    text-align: right;
+    padding: 16px 20px;
+    border-top: 1px #f0f0f0 solid;
+  }
+}
+.ant-modal-footer > div {
+  display: flex;
+  justify-content: center;
+}
+.ant-modal-footer button + button {
+  margin-left: 40px;
+}
+.ant-table-footer {
+  background: #ffffff;
+  text-align: end;
+}

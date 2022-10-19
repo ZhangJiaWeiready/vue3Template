@@ -1,0 +1,25 @@
+//layout-默认内容区域布局
+.wrapper-mixin() {
+  .wrapper {
+    .wrapper-columns{
+      display: flex;
+      .wrapper-columns-left{
+        flex: 0 0 220px;
+        margin-right: 20px;
+      }
+      .wrapper-columns-right{
+        flex: 1 1 0;
+      }
+    }
+   .wrapper-searchs {
+      & > .searchs-main {
+        width: 80%;
+      }
+    }
+   .wrapper-content {
+      margin-top: 10px;
+      min-height: calc(100vh - 156px);
+      background: #fff;
+    }
+  }
+}

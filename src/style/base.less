@@ -1,0 +1,149 @@
+
+ #app,body,html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+
+
+/*常用简写*/
+
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+//margin缩写
+.marginLoop(@n, @i: 1 ) when (@i =< @n) {
+  @num:@i*5;
+  .mt@{num} {
+    margin-top: @num *1px;
+  }
+  .mr@{num} {
+    margin-right: @num *1px;
+  }
+  .mb@{num} {
+    margin-bottom:@num *1px;
+  }
+  .ml@{num} {
+    margin-left: @num *1px;
+  }
+  .marginLoop(@n, (@i + 1));
+}
+
+.marginLoop(5);
+
+/* 设置浮动，减少浮动带来的 bug */
+.fl,
+.fr {
+  display: inline;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.tac{
+  text-align: center;
+}
+.ant-card-head-title {
+  font-size: 14px;
+  font-weight: 400;
+}
+// ::-webkit-scrollbar {
+//   /*滚动条整体样式*/
+//   width : 8px;  /*高宽分别对应横竖滚动条的尺寸*/
+//   height: 3px;
+// }
+// ::-webkit-scrollbar-thumb {
+//   /*滚动条里面小方块*/
+//   border-radius: 10px;
+//   box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+//   background   : rgba(83, 83, 83, 0.5);
+// }
+// ::-webkit-scrollbar-track {
+//   /*滚动条里面轨道*/
+//   box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+//   border-radius: 10px;
+//   background   : rgba(237, 237, 237, 0.6);
+// }
+.project-select.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) {
+  .ant-select-selector {
+      box-shadow: none;
+      border: none;
+  }
+}
+.ant-menu-vertical.ant-menu-sub, .ant-menu-vertical-left.ant-menu-sub, .ant-menu-vertical-right.ant-menu-sub {
+  min-width: 105px;
+  // font-size: 14px;
+}
+.ant-menu-submenu-popup {
+  background-color: #111426;
+}
+.ant-menu-submenu-popup > .ant-menu {
+  background-color: #111426;
+  color: rgba(255, 255, 255, 0.65);
+}
+.ant-menu-vertical .ant-menu-item-only-child:not(:last-child){
+  border-bottom: 1px solid #3F87FF;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: transparent;
+  
+}

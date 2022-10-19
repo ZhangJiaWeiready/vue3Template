@@ -1,0 +1,79 @@
+/*
+ * @功能描述:  antdesign--form相关样式重写
+ * @作者: liuzq 
+ * @创建时间: 2021-08-31 14:27:53 
+ * @最新修改人: liuzq 
+ * @最新修改时间: 2021-08-31 14:27:53 
+ */
+ @inputWidth:160px;
+ @inputHeight:32px;
+
+.custom-input-size-mixin(@width,@height){
+    height: @height;
+    width: @width;
+}
+.custom-form-mixin(@width,@height,@default-shadow:none){
+    .ant-input-affix-wrapper{
+        .custom-input-size-mixin(@width,@height);
+        box-shadow: @default-shadow;
+    }
+    .ant-form-item{
+        .ant-select{
+            .custom-input-size-mixin(@width,@height);
+        }
+        .ant-form-item-label{
+            font-weight: 500;
+        }
+        .ant-checkbox-wrapper{
+            font-weight: 500;
+        }
+    } 
+    .ant-form-item-control-input-content > .ant-input{
+        .custom-input-size-mixin(@width,@height);
+        box-shadow: @default-shadow;
+    }
+    .ant-select:not(.ant-select-customize-input){
+        .ant-select-selector{
+            box-shadow: @default-shadow;
+        }
+    }
+    .ant-calendar-picker-input.ant-input{
+        .custom-input-size-mixin(@width,@height);
+        box-shadow: @default-shadow;
+    }
+}
+
+// form  form-input  -inline
+.ant-form-inline{
+    //宽度:@inputWidth, 高度: @inputHeight, 阴影: @default-shadow
+    .custom-form-mixin(@inputWidth,@inputHeight,@default-shadow);
+}
+
+@horizontal-inputWidth:480px;
+@horizontal-inputHeight:32px;
+// -horizontal
+.ant-form-horizontal{
+    .custom-form-mixin(@horizontal-inputWidth,@horizontal-inputHeight,none);
+    .ant-form-item-label{
+        width: 90px;
+    }
+}
+//modal-form  form  form-input  垂直、弹窗、from表单
+@mf-inputHeight:32px;
+@mf-inputWidth:310px;
+@mf-labelWidth:80px;
+.modal-form-wrapper{
+    width: 392px;
+    margin: 0 auto;
+    .ant-form-horizontal{
+        .custom-form-mixin(@mf-inputWidth,@mf-inputHeight);
+    }
+    .ant-form-item-label > label{
+        width: 80px;
+        justify-content: flex-end;
+    }
+}
+
+textarea.ant-input {
+    max-width: none;
+}
